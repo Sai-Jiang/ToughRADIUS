@@ -6,7 +6,7 @@ VOLUME [ "/var/toughradius" ]
 RUN pypy -m pip install Click
 RUN pypy -m pip install https://github.com/talkincode/toughlib/archive/master.zip --upgrade --no-deps
 RUN pypy -m pip install https://github.com/talkincode/txradius/archive/master.zip --upgrade --no-deps
-RUN git clone -b release-stable https://github.com/talkincode/ToughRADIUS.git /opt/toughradius && \
+RUN git clone -b WingLab https://github.com/Sai-Jiang/ToughRADIUS.git /opt/toughradius && \
     ln -s /opt/toughradius/build/stable/toughradius.json /etc/toughradius.json && \
     ln -s /opt/toughradius/build/stable/supervisord.conf /etc/supervisord.conf && \
     chmod +x /opt/toughradius/radiusctl 
